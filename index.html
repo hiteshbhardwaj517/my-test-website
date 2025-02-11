@@ -3,47 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ByteCables Pvt. Ltd.</title>
+  <title>Product Showcase</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to Bytecables.com</h1>
-      <p>This is a great place to check out our new products.</p>
-      <a href="#about" class="cta-btn">Learn More</a>
-    </div>
-  </section>
+  <!-- Header -->
+  <header>
+    <div class="logo">ByteCables</div>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Product</a>
+      <a href="#">About Us</a>
+    </nav>
+  </header>
 
-  <!-- About Section 
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>This is where you can talk about your work, background, or anything you want to share with your audience.</p>
-      <div class="info">
-        <div class="info-box">
-          <h3>Skill 1</h3>
-          <p>Detail about skill or project 1</p>
-        </div>
-        <div class="info-box">
-          <h3>Skill 2</h3>
-          <p>Detail about skill or project 2</p>
-        </div>
-        <div class="info-box">
-          <h3>Skill 3</h3>
-          <p>Detail about skill or project 3</p>
+  <!-- Main Section -->
+  <div class="main">
+    <div class="card-swiper">
+      <h2>Our Products</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Product Card 1 -->
+          <div class="swiper-card">
+            <div class="card-content">
+              <!-- Left Side: Product Image -->
+              <div class="card-left">
+                <img class="product-image" src="product1-image.jpg" alt="Product Image">
+                <img class="dummy-image" src="dummy-image-icon.png" alt="Dummy Image">
+              </div>
+              <!-- Right Side: Product Title and Specifications -->
+              <div class="card-right">
+                <h3 class="product-title">Product 1</h3>
+                <ul class="product-specs">
+                  <li><strong>Weight:</strong> 1.2 kg</li>
+                  <li><strong>Dimensions:</strong> 15 x 10 x 5 cm</li>
+                  <li><strong>Battery Life:</strong> 20 hours</li>
+                  <li><strong>Price:</strong> $499</li>
+                </ul>
+              </div>
+            </div>
+            <h2 class="card-title">Amazing Product 1</h2>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="swiper-card">
+            <div class="card-content">
+              <!-- Left Side: Product Image -->
+              <div class="card-left">
+                <img class="product-image" src="product2-image.jpg" alt="Product Image">
+                <img class="dummy-image" src="dummy-image-icon.png" alt="Dummy Image">
+              </div>
+              <!-- Right Side: Product Title and Specifications -->
+              <div class="card-right">
+                <h3 class="product-title">Product 2</h3>
+                <ul class="product-specs">
+                  <li><strong>Weight:</strong> 1.5 kg</li>
+                  <li><strong>Dimensions:</strong> 20 x 10 x 5 cm</li>
+                  <li><strong>Battery Life:</strong> 10 hours</li>
+                  <li><strong>Price:</strong> $199</li>
+                </ul>
+              </div>
+            </div>
+            <h2 class="card-title">Amazing Product 2</h2>
+          </div>
+
+          <!-- More product cards as needed -->
+
         </div>
       </div>
+      <div class="dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <!-- Add more dots for more cards -->
+      </div>
     </div>
-  </section>
-  -->
+  </div>
 
-  <!-- Footer Section -->
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Bytecables Pvt. Ltd. All rights reserved.</p>
+    &copy; 2025 My Company. All rights reserved.
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
