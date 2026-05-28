@@ -3,124 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZeltoSoft | Modern Cloud Solutions</title>
-    <!-- Google Fonts for the Fancy Logo -->
+    <title>CloudSphere | Modern Cloud Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     
-    <!-- Bootstrap 5 CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     
-    <style>
-        /* Custom Subtle Color Palette */
-        :root {
-            --bg-subtle: #f4f7f6;
-            --text-muted: #6c757d;
-            --accent-soft: #e2eafc;
-            --primary-slate: #4a5568;
-            --card-hover: #edf2f7;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #ffffff;
-            color: #333333;
-        }
-
-        /* Fancy Textual Logo Styling */
-        .fancy-logo {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 800;
-            font-size: 1.6rem;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #4a5568 30%, #90e0ef 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: relative;
-            transition: opacity 0.3s ease;
-        }
-        
-        .fancy-logo span {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-weight: 600;
-            -webkit-text-fill-color: #708090; /* Soft slate contrast */
-            margin-left: 1px;
-        }
-
-        .fancy-logo:hover {
-            opacity: 0.85;
-        }
-
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid #e9ecef;
-        }
-
-        .hero-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, var(--bg-subtle) 100%);
-            padding: 100px 0;
-        }
-
-        .service-card {
-            border: 1px solid #e9ecef;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            background-color: #ffffff;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-            background-color: var(--card-hover);
-        }
-
-        .icon-box {
-            width: 60px;
-            height: 60px;
-            background-color: var(--accent-soft);
-            color: var(--primary-slate);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .btn-custom {
-            background-color: var(--primary-slate);
-            color: white;
-            border-radius: 8px;
-            padding: 10px 24px;
-            transition: opacity 0.2s;
-        }
-
-        .btn-custom:hover {
-            color: white;
-            opacity: 0.9;
-        }
-
-        .footer {
-            background-color: #1a202c;
-            color: #a0aec0;
-            padding: 40px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg sticky-top py-3">
         <div class="container">
-            <!-- Fancy Textual Logo -->
             <a class="navbar-brand fancy-logo d-flex align-items-center" href="#">
                 Cloud<span>Sphere</span>
             </a>
-            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -128,125 +27,74 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#features">Why Us</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-outline-secondary btn-sm ms-2 px-3" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="hero" class="hero-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <span class="badge bg-light text-secondary border px-3 py-2 mb-3">Next-Gen Infrastructure</span>
                     <h1 class="display-4 fw-bold text-dark mb-4">Simpler cloud hosting for your applications.</h1>
-                    <p class="lead text-muted mb-4">Deploy, scale, and manage your apps with an intuitive interface and zero maintenance overhead. Built for modern development teams.</p>
+                    <p class="lead text-muted mb-4">Deploy, scale, and manage your apps with an intuitive interface and zero maintenance overhead.</p>
                     <div class="d-flex gap-3">
-                        <a href="#services" class="btn btn-custom">Explore Services</a>
-                        <a href="#features" class="btn btn-light border">Learn More</a>
+                        <button id="alertBtn" class="btn btn-custom">Explore Services</button>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center">
                     <div class="p-5 bg-white rounded-4 shadow-sm border d-inline-block position-relative">
                         <i class="bi bi-cloud-arrow-up text-body-tertiary" style="font-size: 8rem;"></i>
-                        <div class="position-absolute top-10 start-10 badge bg-white border text-dark p-2 shadow-sm"><i class="bi bi-shield-check text-success me-1"></i> Secure</div>
-                        <div class="position-absolute bottom-10 end-10 badge bg-white border text-dark p-2 shadow-sm"><i class="bi bi-speedometer text-info me-1"></i> 99.9% Uptime</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="py-5 my-5">
         <div class="container">
-            <div class="text-center max-width-md mx-auto mb-5">
+            <div class="text-center mx-auto mb-5">
                 <h2 class="fw-bold">Our Cloud Ecosystem</h2>
                 <p class="text-muted">Everything you need to build, deploy, and scale digital products effortlessly.</p>
             </div>
             
             <div class="row g-4">
-                <!-- Service 1 -->
                 <div class="col-md-4">
                     <div class="card service-card p-4 h-100">
-                        <div class="icon-box">
-                            <i class="bi bi-cpu"></i>
-                        </div>
+                        <div class="icon-box"><i class="bi bi-cpu"></i></div>
                         <h4 class="fw-semibold">Cloud Compute</h4>
-                        <p class="text-muted flex-grow-1">Flexible virtual machines with resizable capacity, customized to match your workload demands instantly.</p>
-                        <a href="#" class="text-secondary text-decoration-none fw-medium mt-3">Learn more <i class="bi bi-arrow-right ms-1"></i></a>
+                        <p class="text-muted">Flexible virtual machines with resizable capacity tailored to your needs.</p>
                     </div>
                 </div>
-                <!-- Service 2 -->
                 <div class="col-md-4">
                     <div class="card service-card p-4 h-100">
-                        <div class="icon-box">
-                            <i class="bi bi-database"></i>
-                        </div>
+                        <div class="icon-box"><i class="bi bi-database"></i></div>
                         <h4 class="fw-semibold">Managed Databases</h4>
-                        <p class="text-muted flex-grow-1">Fully managed SQL and NoSQL instances with automated backups, replication, and high-availability setups.</p>
-                        <a href="#" class="text-secondary text-decoration-none fw-medium mt-3">Learn more <i class="bi bi-arrow-right ms-1"></i></a>
+                        <p class="text-muted">Fully managed SQL and NoSQL instances with automated backups.</p>
                     </div>
                 </div>
-                <!-- Service 3 -->
                 <div class="col-md-4">
                     <div class="card service-card p-4 h-100">
-                        <div class="icon-box">
-                            <i class="bi bi-hdd-network"></i>
-                        </div>
+                        <div class="icon-box"><i class="bi bi-hdd-network"></i></div>
                         <h4 class="fw-semibold">Object Storage</h4>
-                        <p class="text-muted flex-grow-1">Secure, immutable, and scalable object storage designed to house your unstructured data and static assets.</p>
-                        <a href="#" class="text-secondary text-decoration-none fw-medium mt-3">Learn more <i class="bi bi-arrow-right ms-1"></i></a>
-                    </div>
-                </div>
-                <!-- Service 4 -->
-                <div class="col-md-4">
-                    <div class="card service-card p-4 h-100">
-                        <div class="icon-box">
-                            <i class="bi bi-shield-lock"></i>
-                        </div>
-                        <h4 class="fw-semibold">Cloud Security & IAM</h4>
-                        <p class="text-muted flex-grow-1">Granular access controls, automated threat detection, and free SSL certificates to shield your architecture.</p>
-                        <a href="#" class="text-secondary text-decoration-none fw-medium mt-3">Learn more <i class="bi bi-arrow-right ms-1"></i></a>
-                    </div>
-                </div>
-                <!-- Service 5 -->
-                <div class="col-md-4">
-                    <div class="card service-card p-4 h-100">
-                        <div class="icon-box">
-                            <i class="bi bi-lightning-charge"></i>
-                        </div>
-                        <h4 class="fw-semibold">Serverless Functions</h4>
-                        <p class="text-muted flex-grow-1">Run code snippets seamlessly in response to events without ever thinking about provisioning or server scale.</p>
-                        <a href="#" class="text-secondary text-decoration-none fw-medium mt-3">Learn more <i class="bi bi-arrow-right ms-1"></i></a>
-                    </div>
-                </div>
-                <!-- Service 6 -->
-                <div class="col-md-4">
-                    <div class="card service-card p-4 h-100">
-                        <div class="icon-box">
-                            <i class="bi bi-graph-up-arrow"></i>
-                        </div>
-                        <h4 class="fw-semibold">Analytics & Insights</h4>
-                        <p class="text-muted flex-grow-1">Real-time metrics, comprehensive logging, and resource usage tracking built directly into your dashboard.</p>
-                        <a href="#" class="text-secondary text-decoration-none fw-medium mt-3">Learn more <i class="bi bi-arrow-right ms-1"></i></a>
+                        <p class="text-muted">Secure, immutable, and scalable object storage for your static assets.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container text-center">
             <p class="mb-2 fw-bold text-white">CloudSphere</p>
-            <p class="small mb-0">&copy; 2026 CloudSphere Inc. All rights reserved. Designed with subtle elegance.</p>
+            <p class="small mb-0">&copy; 2026 CloudSphere Inc. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap Bundle with Popper CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
