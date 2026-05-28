@@ -1,233 +1,96 @@
-/* Basic Reset */
-body, h1, h2, p {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+/* Custom Subtle Color Palette */
+:root {
+    --bg-subtle: #f4f7f6;
+    --text-muted: #6c757d;
+    --accent-soft: #e2eafc;
+    --primary-slate: #4a5568;
+    --card-hover: #edf2f7;
 }
 
-/* Global Styles */
 body {
-  font-size: 16px;
-  color: #fff; /* Set default text color to white for better contrast */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
 }
 
-a {
-  text-decoration: none;
-  color: #fff; /* Make links white */
+/* Fancy Textual Logo Styling */
+.fancy-logo {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #4a5568 30%, #90e0ef 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
 }
 
-/* Header Styles */
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #1e2a47; /* Header background color */
-  color: white;
+.fancy-logo span {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 600;
+    -webkit-text-fill-color: #708090;
+    margin-left: 1px;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
+.fancy-logo:hover {
+    opacity: 0.85;
 }
 
-.menu {
-  display: flex;
-  gap: 20px;
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e9ecef;
 }
 
-.menu a {
-  position: relative;
-  font-size: 18px;
-  padding: 10px;
-  transition: all 0.3s ease;
+.hero-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, var(--bg-subtle) 100%);
+    padding: 100px 0;
 }
 
-.menu a:hover {
-  color: #ff6600;
+.service-card {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
 }
 
-.menu a::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #ff6600;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.3s ease-out;
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    background-color: var(--card-hover);
 }
 
-.menu a:hover::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-/* Main Section Styles */
-.main {
-  padding: 50px 20px;
-  background-color: #f4f4f9; /* Lighter background for the middle section */
-  text-align: center;
-}
-
-/* Card Swiper Styles */
-.card-swiper {
-  margin-bottom: 50px;
-}
-
-.card-swiper h2 {
-  font-size: 28px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.swiper-container {
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-}
-
-.swiper-wrapper {
-  display: flex;
-  transition: transform 1s ease-in-out;
-}
-
-.swiper-card {
-  min-width: 100%;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.5s ease;
-}
-
-.card-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.card-content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-}
-
-.card-left {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.product-image {
-  max-width: 150px;
-  max-height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.dummy-image {
-  max-width: 150px;
-  max-height: 150px;
-  border-radius: 8px;
-  background-color: #f4f4f4;
-}
-
-.card-right {
-  flex: 1;
-  padding-left: 20px;
-  text-align: left;
-}
-
-.product-title {
-  font-size: 22px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.product-specs {
-  list-style-type: disc;
-  padding-left: 20px;
-  font-size: 16px;
-  color: #666;
-}
-
-.product-specs li {
-  margin-bottom: 5px;
-}
-
-.dots {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: #ff6600; /* Active dot color */
-}
-
-/* Footer Styles */
-footer {
-  background-color: #1e2a47;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .swiper-container {
-    width: 100%;
-  }
-
-  .swiper-card {
-    padding: 15px;
-    display: block; /* Stack items for smaller screens */
-  }
-
-  .card-content {
-    display: block;
-    text-align: center;
-  }
-
-  .card-left,
-  .card-right {
-    width: 100%;
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent-soft);
+    color: var(--primary-slate);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
     margin-bottom: 20px;
-  }
+}
 
-  .product-image,
-  .dummy-image {
-    max-width: 100px;
-    max-height: 100px;
-  }
+.btn-custom {
+    background-color: var(--primary-slate);
+    color: white;
+    border-radius: 8px;
+    padding: 10px 24px;
+    border: none;
+    transition: opacity 0.2s;
+}
 
-  .product-specs {
-    text-align: left;
-    padding-left: 0;
-  }
+.btn-custom:hover {
+    color: white;
+    opacity: 0.9;
+}
+
+.footer {
+    background-color: #1a202c;
+    color: #a0aec0;
+    padding: 40px 0;
 }
